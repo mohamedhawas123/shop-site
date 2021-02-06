@@ -36,4 +36,4 @@ class OrderItem(models.Model):
         return f"order {self.id}"
         
     def get_total_const(self):
-        self.quantity * self.price
+        self.quantity * 5

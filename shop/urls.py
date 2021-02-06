@@ -10,6 +10,7 @@ app_name = 'store'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('cart/', include('cart.urls', namespace='cart')),
+    path('payment/', include('payment.urls', namespace='payment')),
     path('', include('store.urls', namespace="store"),),
     path('orders/', include('orders.urls', namespace='orders'), ),
     
