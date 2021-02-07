@@ -22,7 +22,7 @@ class Order(models.Model):
         return f"Order {self.id}"
     
     def get_total_cost(self):
-        return sum(item.get_total_const() for item in self.items.all() )
+        return sum( item.get_total_const() for item in self.items.all()) 
     
 
 class OrderItem(models.Model):
@@ -36,4 +36,4 @@ class OrderItem(models.Model):
         return f"order {self.id}"
         
     def get_total_const(self):
-        self.quantity * 5
+        return self.price * self.quantity

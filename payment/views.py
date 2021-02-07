@@ -1,7 +1,7 @@
 import braintree
 from django.shortcuts import render, redirect, get_object_or_404
 from django.conf import settings
-from orders.models import Order
+from orders.models import Order, OrderItem
 
 
 # instantiate Braintree payment gateway
@@ -12,7 +12,7 @@ def payment_process(request):
     order_id = request.session.get('order_id')
     order = get_object_or_404(Order, id=order_id)
     total_cost = order.get_total_cost()
-    print(total_cost)
+
     if request.method == 'POST':
         # retrieve nonce
         nonce = request.POST.get('payment_method_nonce', None)
