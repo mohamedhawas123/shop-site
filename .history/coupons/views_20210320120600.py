@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.views.decorators.http import require_POST
 from django.utils import timezone
 from .form import CouponApplyForm
@@ -17,6 +17,4 @@ def couponApply(request):
         
         except Coupon.DoesNotExist:
             request.session['coupon_id'] = None
-    
-    return redirect('cart:cart_detail')
 

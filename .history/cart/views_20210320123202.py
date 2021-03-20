@@ -3,7 +3,7 @@ from django.views.decorators.http import require_POST
 from .cart import Cart
 from store.models import Product
 from .forms import CartAddProduct
-
+from coupons.models import Coupon
 
 
 @require_POST
@@ -35,4 +35,8 @@ def cart_detail(request):
 
 
 
-
+@property
+def coupon(self):
+    if self.coupon_id:
+        try:
+            return Coupon

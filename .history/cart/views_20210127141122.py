@@ -35,4 +35,3 @@ def cart_detail(request):
 
 
 
-

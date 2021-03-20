@@ -35,4 +35,8 @@ def cart_detail(request):
 
 
 
-
+@property
+def coupon(self):
+    if self.coupon_id:
+        try:
+            return Coupon.objects.get(id=self.)
