@@ -21,8 +21,7 @@ def order_create(request):
             order = order_form.save(commit=False)
             if cart.coupon:
                 order.coupon = cart.coupon
-                order.discount = cart.coupon.discount
-            order.save()
+                order.discount cart.coupon.discount
             for item in cart:
                 OrderItem.objects.create(order=order, product=item['product'], price=item['price'], quantity=item['quantity'])
         cart.clear()

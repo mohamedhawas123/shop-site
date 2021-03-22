@@ -110,13 +110,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-from django.utils.translation import gettext_lazy as _
-
 LANGUAGE_CODE = 'en'
 
 LANGUAGES = (
-    ('en', _('english')),
-    ('ar', _('arabic'))
+    ('en', 'english'),
+    ('ar', 'arabic')
 )
 
 TIME_ZONE = 'UTC'
@@ -143,11 +141,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_root/')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-
-LOCAL_PATHS = (
-    os.path.join(BASE_DIR, 'local/')
-)
 
 
 CART_SESSION_ID = 'cart'

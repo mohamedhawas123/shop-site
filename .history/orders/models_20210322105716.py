@@ -3,16 +3,14 @@ from store.models import Product
 from coupons.models import Coupon
 from django.core.validators import MaxValueValidator, MinValueValidator
 from decimal import Decimal
-from django.utils.translation import gettext_lazy as _
-
 
 class Order(models.Model):
-    first_name = models.CharField(_('first name'),max_length=255)
-    last_name = models.CharField(_('last_name'),max_length=255)
-    email = models.EmailField(_('email'))
-    address = models.CharField(_('address'),max_length=250)
-    postel_code = models.CharField(_('postel_code'),max_length=254)
-    city = models.CharField(_('city'),max_length=254)
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    email = models.EmailField()
+    address = models.CharField(max_length=250)
+    postel_code = models.CharField(max_length=254)
+    city = models.CharField(max_length=254)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now_add=True)
     paid = models.BooleanField(default=False)
@@ -30,7 +28,7 @@ class Order(models.Model):
     
     def get_total_cost(self):
         total_cost = sum( item.get_total_const() for item in self.items.all())
-        return total_cost - total_cost *  (self.discount / Decimal(100))
+        return total_cost - total_cost *  (self.discount / Dec)
     
 
 class OrderItem(models.Model):

@@ -110,13 +110,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-from django.utils.translation import gettext_lazy as _
-
 LANGUAGE_CODE = 'en'
 
 LANGUAGES = (
-    ('en', _('english')),
-    ('ar', _('arabic'))
+    ('en', 'english'),
+    ('ar', 'arabic')
 )
 
 TIME_ZONE = 'UTC'
