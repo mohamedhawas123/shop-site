@@ -7,7 +7,7 @@ from django.conf.urls.i18n import i18n_patterns
 
 app_name = 'store'
 
-urlpatterns = i18n_patterns(
+urlpatterns = urlpatterns(
     path('admin/', admin.site.urls),
     path('cart/', include('cart.urls', namespace='cart')),
     path('payment/', include('payment.urls', namespace='payment')),

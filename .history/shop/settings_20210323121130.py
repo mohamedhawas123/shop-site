@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'orders',
     'payment',
     'coupons',
-    'rosetta',
+    ''rosetta','
 ]
 
 MIDDLEWARE = [

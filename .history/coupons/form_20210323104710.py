@@ -5,5 +5,5 @@ class CouponApplyForm(forms.Form):
 
 
     
-# class CouponApplyForm(forms.Form):
-#     code = forms.CharField(label=_('Coupon'))
+class CouponApplyForm(forms.Form):
+    code = forms.CharField(label=_('Coupon'))

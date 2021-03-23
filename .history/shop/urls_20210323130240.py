@@ -7,7 +7,7 @@ from django.conf.urls.i18n import i18n_patterns
 
 app_name = 'store'
 
-urlpatterns = i18n_patterns(
+urlpatterns = [
     path('admin/', admin.site.urls),
     path('cart/', include('cart.urls', namespace='cart')),
     path('payment/', include('payment.urls', namespace='payment')),
@@ -17,7 +17,7 @@ urlpatterns = i18n_patterns(
     path('orders/', include('orders.urls', namespace='orders'), ),
     
     
-)
-
+    
+]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
