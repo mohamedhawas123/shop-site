@@ -25,7 +25,7 @@ SECRET_KEY = '&dkw(3s4!wv#z3pqrde02en5#pzzcz1uqj=k2efq^qxcs=skay'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['shopify-django.herokuapp.com']
 
 
 # Application definition
