@@ -34,7 +34,7 @@ def payment_process(request):
             # store the unique transaction id
             order.braintree_id = result.transaction.id
             order.save()
-            payment_completed.delay(order.id)
+            payment_completed(order.id)
             return redirect('payment:done')
         else:
             return redirect('payment:canceled')
