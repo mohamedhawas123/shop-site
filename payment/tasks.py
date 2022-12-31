@@ -1,6 +1,5 @@
 from io import BytesIO
 from celery import task
-import weasyprint
 from django.template.loader import render_to_string
 from django.core.mail import EmailMessage
 from django.conf import settings
