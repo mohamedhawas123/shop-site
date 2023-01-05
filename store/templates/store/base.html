@@ -14,14 +14,14 @@
       <div class="cart">
         {% with total_items=cart|length %}
         {% if total_items > 0 %}
-        your Fucking Cart:
+        عربتك:
         <a href="{% url 'cart:cart_detail' %}" >
           {{total_items}} item {{ total_items|pluralize }},
           {{cart.get_total_price}}
 
         </a>
         {% else %}
-        فاضيه يا نجم
+        العربة فارغة
         {% endif %}
         {% endwith %}
       </div>
